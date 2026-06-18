@@ -76,6 +76,6 @@ def delete_task(id):
     for i in tasks:
         if id == i["id"]:
             tasks.remove(i)
-            return jsonify({"message" : f'Tâche {i["id"]} supprimée avec succès'})
+            return jsonify({"message" : f'Tâche {i["id"]} supprimée avec succès'}), 200
 
     return jsonify({"message" : "Cette tâche n'existe pas"}), 404
